@@ -27,9 +27,9 @@ describe('My Second Test Suite', function () {
         homePage.getTwoWayDataBinding().should('have.value', this.data.name)
         //  cy.get('input[name="name"]:nth-child(2)').should('have.atrr','minlength','2')
         homePage.getEntrepreneaur().should('be.disabled')
-        cy.pause()
-        homePage.getShopTab().click()
         Cypress.config('defaultCommandTimeout', 8000)
+    
+        homePage.getShopTab().click()
 
 
 
@@ -87,6 +87,13 @@ describe('My Second Test Suite', function () {
 
 
 })
+
+
+
+
+
+
+
 
 
 
