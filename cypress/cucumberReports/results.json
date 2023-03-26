@@ -1,0 +1,70 @@
+{
+    "StatusOrigin": 0,
+    "LastUpdateDate": "2023-01-18T10:59:09.704661Z",
+    "LastUpdatedBy": 287800,
+    "FirstPublishDate": "2023-01-18T10:59:09.7046618Z",
+    "Alias": null,
+    "Name": "ReadytoRemove",
+    "InternalCode": null,
+    "ParentAssetId": null,
+    "ParentAssetExternalRef": null,
+    "Thumbnail": null,
+    "ThumbnailRatio": 1.0,
+    "UserAddedThumbnail": false,
+    "Banner": null,
+    "UserAddedBanner": false,
+    "DisplayDate": "2023-01-18T10:59:09.7046618Z",
+    "ParentDisplayDate": "2023-01-18T10:59:09.7046618Z",
+    "ParentPublisherId": null,
+    "Accounts": [
+        {
+            "AccountId": 912663,
+            "AccountEntityId": 0,
+            "RelationshipId": 851794,
+            "RelationshipExternalRef": "0018W000028xRZyQAM",
+            "Source": "::NewAccount"
+        }
+    ],
+    "AssetEntities": [
+        818616
+    ],
+    "PrimaryAssetEntity": 818616,
+    "PrimaryAccountId": 320526,
+    "PrimaryAccountRef": null,
+    "SecondaryAccountId": 912663,
+    "SecondaryAccountRef": null,
+    "RelationshipId": null,
+    "WorkflowStatusId": 320591,
+    "CustomFields": {
+        "SFDCAccountId": "0018W000028xRZyQAM",
+        "CompanyWeb": "",
+        "StreetAddress": "",
+        "State": "",
+        "Country": "",
+        "Zip": "",
+        "City": "",
+        "ProgramLevelSelect": null,
+        "ProgramLevel": null,
+        "Product": {
+            "$type": "System.Collections.Generic.List`1[[System.Int32, mscorlib]], mscorlib",
+            "$values": [
+                322865
+            ]
+        }
+    },
+    "Properties": null,
+    "Documents": [],
+    "DisallowApiDelete": false,
+    "DisallowApiEdit": false,
+    "SearchTerms": [],
+    "PublishedRelatedAssetIds": [],
+    "IntegrationId": "EVe-Am_TuUS9f0UvspQ-3Q",
+    "HasAccessByAssetComponent": false,
+    "DisallowPublicComments": false,
+    "NotifyOfOriginalContentChange": false,
+    "ImportRef": null,
+    "ExternalRef": "0018W000028xRZyQAM",
+    "ExternalVersion": 1,
+    "RelationshipExternalRef": "0018W000028xRZyQAM",
+    "ExternalObjectString": "{\"Ref\":null,\"Properties\":{\"Id\":\"0018W000028xRZyQAM\",\"Name\":\"ReadytoRemove\",\"Website\":\"\",\"BillingStreet\":\"\",\"BillingState\":\"\",\"BillingCountry\":\"\",\"BillingPostalCode\":\"\",\"BillingCity\":\"\",\"wi__Share_to_WI__c\":true,\"Program_Level__c\":\"\",\"Ownership\":\"\"},\"MultiDataSetProperties\":null,\"SecondaryObjects\":[{\"Ref\":\"0018W000028xRZyQAM\",\"Properties\":{\"Id\":\"0018W000028xRZyQAM\",\"Name\":\"ReadytoRemove\",\"Website\":\"\",\"BillingStreet\":\"\",\"BillingState\":\"\",\"BillingCountry\":\"\",\"BillingPostalCode\":\"\",\"BillingCity\":\"\",\"wi__Share_to_WI__c\":true,\"Program_Level__c\":\"\",\"Ownership\":\"\"},\"MultiDataSetProperties\":null,\"SecondaryObjects\":null,\"DefaultProperties\":null,\"UseExistingData\":false}],\"DefaultProperties\":null,\"UseExistingData\":false}"
+}

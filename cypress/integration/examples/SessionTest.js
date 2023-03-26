@@ -1,33 +1,100 @@
-/// <reference types="Cypress" />
+/// <reference types="cypress" />
+
+//const neatCSV = require('neat-csv')
+
+import neatCSV from 'neat-csv';
+
+let productName
+
+describe('JWT Session', () => {
+
+  it('is logged in through local storage', async() => {
 
 
-describe('JWT session', function () {
 
-    it('is loggen in through local storage', function () {
+    cy.LoginAPI().then(function()
 
-            cy.LoginAPI().then(function () {
-                cy.visit("https://rahulshettyacademy.com/client", {
-                    onBeforeLoad: function (window) {
-                        window.localStorage.setItem('token', Cypress.env('token'));
-                        cy.get("[routerlink*='cart']").click()
-                    }
-                })
-            })
+    {
 
-cy.get(".card-body button:last-of-type").eq(1).click();
-cy.get("[routerlink*='cart']").click();
-cy.contains("Checkout").click()
-cy.get("[placeholder*='Country']").type("id")
-cy.get(".ta-results button").each(($el,index,$list)=>
-{
-    if($el.text=== "India"){
-        cy.wtam($el).click()
-    }
-})
-cy.get(".action_submit").click();
-cy.wait(2000)
-cy.get(".order-summary button").click();
+        cy.visit("https://rahulshettyacademy.com/client",
+
+        {
+
+            onBeforeLoad :function(window)
+
+            {
+
+                window.localStorage.setItem('token',Cypress.env('token'))
+
+            }
 
 
- })
-})
+
+        })       
+
+
+
+    })
+
+    cy.get(".card-body b").eq(1).then(function(ele)
+
+      {
+
+      productName =  ele.text();
+
+      })
+
+    cy.get(".card-body button:last-of-type").eq(1).click();
+
+    cy.get("[routerlink*='cart']").click();
+
+    cy.contains("Checkout").click();
+
+    cy.get("[placeholder*='Country']").type("ind")
+
+    cy.get('.ta-results button').each(($e1, index, $list) => {
+
+
+
+      if($e1.text()===" India")
+
+      {
+
+          cy.wrap($e1).click()
+
+      }
+
+  })
+
+    cy.get(".action__submit").click();
+
+    cy.wait(2000)
+
+    cy.get(".order-summary button").click();
+
+   
+
+  cy.readFile(Cypress.config("fileServerFolder")+"/cypress/downloads/order-invoice_rahul.csv")
+
+  .then(async(text)=>
+
+  {
+
+    const csv =  await neatCSV(text)
+
+    console.log(csv)
+
+    const actualProductCSV = csv[0]["Product Name"]
+
+    expect(productName).to.equal(actualProductCSV)
+
+
+
+ 
+
+  })
+
+  })
+
+  })
+

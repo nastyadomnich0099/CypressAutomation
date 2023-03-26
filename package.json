@@ -20,7 +20,8 @@
   "devDependencies": {
     "cypress": "^12.3.0",
     "cypress-iframe": "^1.0.1",
-    "multiple-cucumber-html-reporter": "^3.2.0"
+    "multiple-cucumber-html-reporter": "^3.2.0",
+    "neat-csv":"5.1.0"
   },
   "dependencies": {
     "@badeball/cypress-cucumber-preprocessor": "^15.1.4",
