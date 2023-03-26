@@ -7,41 +7,27 @@ it('My FirstTest case',function() {
  
     cy.visit("https://rahulshettyacademy.com/angularAppdemo/");
  
-    cy.intercept({
-        method : 'GET',
-        url : 'https://rahulshettyacademy.com/Library/GetBook.php?AuthorName=shetty'
-    },
+    cy.intercept('GET','https://rahulshettyacademy.com/Library/GetBook.php?AuthorName=shetty',
+    (req)=>
+    {
+    req.url="https://rahulshettyacademy.com/Library/GetBook.php?AuthorName=malhotra"
  
-     {
-         statusCode : 200,
-         body : [{
-                "book_name": "RestAssured with Java",
-                "isbn": "RSU",
-                "aisle": "2301"    }]
-          
-     }).as('bookretrievals')
-     cy.get("button[class='btn btn-primary']").click()
-     cy.wait('@bookretrievals').should(({request,response})=>
-     {
-         cy.get('tr').should('have.length',response.body.length+1)
-      
-     })
-     cy.get('p').should('have.text','Sorry we have only one book available')
+    req.continue((res)=>
+    {
+       // expect(res.statusCode).to.equal(403)
+    })
+ }
+ ).as("dummyUrl")
  
- 
- 
-     //length of the response array = rows of the table
- 
- 
- 
- 
- 
- 
- 
- 
- 
+ cy.get("button[class='btn btn-primary']").click()
+ cy.wait('@dummyUrl')
  
 })
  
 })
+ 
+ 
+ 
+ 
+ 
  

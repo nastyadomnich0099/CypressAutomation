@@ -26,7 +26,8 @@ module.exports = defineConfig({
     setupNodeEvents,
       // implement node event listeners here
 
-    specPattern: 'cypress/integration/examples/BDD/*.feature'
-   
+    specPattern: 'cypress/integration/examples/BDD/*.feature',
+    specPattern: 'cypress/integration/examples/faketest2.js',
+    specPattern: 'cypress/integration/examples/SessionTest.js'
   },
 });
